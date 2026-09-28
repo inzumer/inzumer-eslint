@@ -1,5 +1,5 @@
 // @ts-check
-import vitest from '@vitest/eslint-plugin'
+import vitest from '@vitest/eslint-plugin';
 
 /** @type {import('eslint').Linter.Config[]} */
 export const testing = [
@@ -15,4 +15,4 @@ export const testing = [
       'vitest/prefer-to-have-length': 'error',
     },
   },
-]
+];

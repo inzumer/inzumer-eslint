@@ -1,9 +1,25 @@
 {
-  "name": "@inzumer/eslint-config",
-  "version": "0.1.0",
-  "private": true,
-  "description": "Shared ESLint flat configuration for the Inzumer design system",
+  "name": "@inzumer/eslint",
+  "version": "1.0.0",
+  "description": "Shared ESLint flat configuration for Inzumer projects (TypeScript, React, a11y, Vitest)",
   "license": "MIT",
+  "author": "Nahuel Zamuner <inzumer@gmail.com>",
+  "homepage": "https://github.com/inzumer/inzumer-eslint#readme",
+  "bugs": {
+    "url": "https://github.com/inzumer/inzumer-eslint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inzumer/inzumer-eslint.git"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=20"
+  },
   "type": "module",
   "main": "./index.js",
   "exports": {
@@ -13,7 +29,9 @@
     "./testing": "./testing.js"
   },
   "files": [
-    "*.js"
+    "*.js",
+    "README.md",
+    "LICENSE"
   ],
   "peerDependencies": {
     "eslint": ">=9"
@@ -28,5 +46,16 @@
     "eslint-plugin-react": "^7.37.3",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-unused-imports": "^4.1.4"
+  },
+  "scripts": {
+    "check": "node -e \"import('./index.js').then((m) => { if (!m.base || !m.react || !m.testing) process.exit(1) })\" && prettier --check .",
+    "format": "prettier --write .",
+    "changeset": "changeset",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7",
+    "prettier": "^3.9.9",
+    "eslint": "^9.39.5"
   }
 }

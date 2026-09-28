@@ -1,9 +1,9 @@
 // @ts-check
-import a11y from 'eslint-plugin-jsx-a11y'
-import react from 'eslint-plugin-react'
-import reactHooks from 'eslint-plugin-react-hooks'
+import a11y from 'eslint-plugin-jsx-a11y';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 
-import { base } from './base.js'
+import { base } from './base.js';
 
 /** @type {import('eslint').Linter.Config[]} */
 export const reactConfig = [
@@ -34,4 +34,4 @@ export const reactConfig = [
       'react-hooks/exhaustive-deps': 'warn',
     },
   },
-]
+];

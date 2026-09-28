@@ -1,8 +1,8 @@
 // @ts-check
-import tseslint from '@typescript-eslint/eslint-plugin'
-import tsParser from '@typescript-eslint/parser'
-import importX from 'eslint-plugin-import-x'
-import unusedImports from 'eslint-plugin-unused-imports'
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import importX from 'eslint-plugin-import-x';
+import unusedImports from 'eslint-plugin-unused-imports';
 
 /** @type {import('eslint').Linter.Config[]} */
 export const base = [
@@ -42,4 +42,4 @@ export const base = [
       curly: ['error', 'all'],
     },
   },
-]
+];
