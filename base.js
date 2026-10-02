@@ -1,4 +1,5 @@
 // @ts-check
+import stylistic from '@stylistic/eslint-plugin';
 import tseslint from '@typescript-eslint/eslint-plugin';
 import tsParser from '@typescript-eslint/parser';
 import importX from 'eslint-plugin-import-x';
@@ -9,6 +10,7 @@ export const base = [
   {
     files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
     plugins: {
+      '@stylistic': stylistic,
       '@typescript-eslint': tseslint,
       'import-x': importX,
       'unused-imports': unusedImports,
@@ -40,6 +42,12 @@ export const base = [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       semi: ['error', 'always'],
       curly: ['error', 'all'],
+      // Blank lines after every `if` and before every `return`, for readability.
+      '@stylistic/padding-line-between-statements': [
+        'error',
+        { blankLine: 'always', prev: 'if', next: '*' },
+        { blankLine: 'always', prev: '*', next: 'return' },
+      ],
     },
   },
 ];

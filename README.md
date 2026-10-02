@@ -18,11 +18,11 @@ import { base, react, testing } from '@inzumer/eslint';
 export default [...base, ...react, ...testing];
 ```
 
-| Export    | Adds                                             |
-| --------- | ------------------------------------------------ |
-| `base`    | TypeScript, imports (`import-x`), unused imports |
-| `react`   | React, hooks and `jsx-a11y`                      |
-| `testing` | Vitest rules for `*.test.*` files                |
+| Export    | Adds                                                                                        |
+| --------- | ------------------------------------------------------------------------------------------- |
+| `base`    | TypeScript, imports (`import-x`), unused imports, blank line after `if` and before `return` |
+| `react`   | React, hooks and `jsx-a11y`                                                                 |
+| `testing` | Vitest rules for `*.test.*` files                                                           |
 
 Needs `eslint` 9 or later as a peer dependency.
 
