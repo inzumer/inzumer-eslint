@@ -10,6 +10,7 @@ jobs:
   ci:
     uses: inzumer/inzumer-ci/.github/workflows/node-ci.yml@v1
     with:
+      audit-level: low
       commands: |
         pnpm check
         npm pack --dry-run
